@@ -1,0 +1,107 @@
+/* Featured container */
+.featured-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Featured item */
+  .featured-item {
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .featured-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .featured-item img {
+    width: 100%;
+    border-radius: 5px;
+    transition: filter 0.2s ease-in-out;
+  }
+  
+  /* Featured text */
+  .featured-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .featured-text p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .featured-text span {
+    font-size: 16px;
+  }
+  
+  /* Image glowing effect on hover */
+  .featured-item:hover img {
+    filter: brightness(1.2);
+  }
+  
+  /* Responsive styles for screens with a maximum width of 768px */
+  @media screen and (max-width: 768px) {
+    .featured-container {
+      flex-wrap: wrap;
+    }
+  
+    .featured-item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  /* Image Row Container */
+.image-row-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Image Item */
+  .image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Image Hover Effect */
+  .image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Heading */
+  .image-item h2 {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  

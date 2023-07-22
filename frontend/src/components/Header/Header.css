@@ -1,0 +1,158 @@
+/* Apply box-sizing: border-box to all elements */
+* {
+    box-sizing: border-box;
+  }
+ 
+
+
+.header{
+    height:550px;
+    background-color: #003580;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+
+
+}
+.list-item{
+    box-sizing: border-box;
+
+    margin:5px;
+    padding:10px;
+    cursor: pointer;
+    color:white;
+    list-style: none;
+    border: 1px solid transparent; /* Set initial border to transparent */
+    border-radius: 5px; /* Rounded corners */
+}
+.list-item:hover{
+    border-color: white;
+
+}
+
+.lis{
+    width: 100%;
+    box-sizing: border-box;
+}
+.list{
+    box-sizing: border-box;
+
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+
+}
+.heading{
+    font-weight: bolder;
+    color: white;
+}
+.text{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+.btn-reg{
+    margin-left: 10px;
+    cursor: pointer;
+    max-width:130px;
+    padding:5px;
+    display: inline;
+    background-color: #2777ff;
+    color:white;
+    border: 0px;
+    
+
+}
+.btn-reg:hover{
+    background-color: #074bc1;
+}
+.search {
+    margin-top:15px;
+    width: 80%;
+    max-width: 1024px;
+  }
+  
+  .search-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #074bc1;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .location,
+  .date,
+  .people {
+    width: 30%;
+  }
+  
+  label {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    background-color: #fff;
+  }
+  
+  input[type="number"] {
+    background-color: #f5f5f5;
+  }
+  
+  input[type="text"]::placeholder,
+  input[type="date"]::placeholder,
+  input[type="number"]::placeholder {
+    color: #bbb;
+  }
+  
+/* Previous CSS code (from previous example) */
+/* ... */
+
+/* Additional styles for the submit button */
+input[type="submit"] {
+    margin: 10px;
+    cursor: pointer;
+    width: 200px; /* Set the width you desire for the submit button */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2777ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    /* Add some box-shadow for a subtle depth effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+    /* Center the submit button within the search bar */
+    display: block;
+    margin: 10 auto 20px; /* Keep top and bottom margin to push it down a bit */
+  }
+  
+  input[type="submit"]:hover {
+    /* Add a slight gradient transition on hover for a smoother effect */
+    background-color: #1a61ff;
+    background-image: linear-gradient(to bottom, #1a61ff, #074bc1);
+  }
+  
+  
+
