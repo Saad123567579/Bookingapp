@@ -1,32 +1,6 @@
 const Room = require("../models/Room");
 const Hotel = require("../models/Hotel");
 
-exports.verifyToken = async (req, res, next) => {
-  let token = req.cookies.token;
-  if (!token) {
-    return res.status(404).json("Token not found");
-  }
-  jwt.verify(token, process.env.JWT, (error, user) => {
-    if (error) {
-      return res.status(404).json("Invalid Token");
-    }
-    req.id = user.id;
-    req.isAdmin = user.isAdmin;
-    next();
-  });
-};
-
-exports.verifyUser = async (req, res, next) => {
-  let id = req.id;
-  if (req.isAdmin) {
-    next();
-  }
-  let user = await User.findById(id);
-  if (!user) {
-    return res.status(404).json("Could not find user");
-  }
-  next();
-};
 
 exports.createRoom = async (req, res) => {
   let room = new Room(req.body);

@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const jwt = require('jsonwebtoken');
+
 exports.verifyToken = async(req,res,next) => {
     let token = req.cookies.token;
     if(!token){ return res.status(404).json("Token not found");}
