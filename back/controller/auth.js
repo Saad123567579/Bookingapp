@@ -14,13 +14,10 @@ exports.userSignup = async (req, res) => {
 
     } catch (error) { return res.status(500).json("Internal Server Error"); }
 
-
-
 }
 
 exports.userLogin = async (req, res) => {
-    // try{
-    // let password = await bcrypt.compare(plainPassword, hashedPassword)
+    try{
     let findUser = await User.findOne({ "name": req.body.name });
     if (!findUser) { return res.status(404).json("Invalid username or password"); }
     let compare = await bcrypt.compare(req.body.password, findUser.password);
@@ -30,6 +27,6 @@ exports.userLogin = async (req, res) => {
     return res.cookie("token", token, { httpOnly: true }).status(200).json("Logging you in");
 
 
-    // } catch(error) { return res.status(500).json("Internal Server Error")}
+    } catch(error) { return res.status(500).json("Internal Server Error")}
 
 }
